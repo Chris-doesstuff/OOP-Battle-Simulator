@@ -15,7 +15,7 @@ class Hero:
     
     def __init__(self, name):
         self.name = name
-        self.health = 250
+        self.health = 300
         self.attack_power = random.randint(25, 30)
         #TODO Set the hero's health. You might give the hero more health than a goblin.
         #TODO Set the hero's attack power. Should it be more consistent than the goblin's?

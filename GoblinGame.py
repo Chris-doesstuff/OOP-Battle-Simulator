@@ -1,8 +1,6 @@
 import random
 from goblin import Goblin
 from hero import Hero
-from MegaKnight import MegaKnight
-from babyelf import BabyElf
 
 def main():
     print("Welcome to the Battle Arena!")
@@ -12,12 +10,11 @@ def main():
     hero = Hero("Tachanka")
 
     # Create goblins ༼ ºل͟º ༽ ༼ ºل͟º ༽ ༼ ºل͟º ༽
-    goblins = [Goblin(f"Goblin {i+1}", "green") for i in range(3)]
-
+    goblins = [Goblin(f"Goblin {i+1}") for i in range(3)]
     defeated_goblins = 0
     rounds = 0
     total_damage = 0
-    boss = True
+    
     # Keep track of how many goblins were defeated
 
     # Battle Loop 
@@ -30,7 +27,6 @@ def main():
         damage = hero.strike()
         total_damage += damage
         rounds += 1
-        
         print(f"Hero attacks {target_goblin.name} for {damage} damage!")
         target_goblin.take_damage(damage)
 
