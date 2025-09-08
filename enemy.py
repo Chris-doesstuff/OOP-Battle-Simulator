@@ -3,11 +3,11 @@ class Enemy:
     def __init__(self, name):
         self.name = name
         self.health = 100
-        self.attack_power = random.randint(10, 20)
+        self.attack_power = random.randint(12, 18)
         self.size = 21
     def attack(self):
         attack = random.randint(1, self.attack_power)
-        if attack > 10:
+        if attack > 14:
             print(f"{self.name}'s attack was critical!")
         return attack
 

@@ -15,8 +15,8 @@ class Hero:
     
     def __init__(self, name):
         self.name = name
-        self.health = 300
-        self.attack_power = random.randint(25, 30)
+        self.health = 400
+        self.attack_power = random.randint(25, 35)
         #TODO Set the hero's health. You might give the hero more health than a goblin.
         #TODO Set the hero's attack power. Should it be more consistent than the goblin's?
     
@@ -25,6 +25,7 @@ class Hero:
         attack = random.randint(1, self.attack_power)
         if attack > 28:
             print(f"{self.name}'s attack was critical!")
+
         return attack
         # TODO Implement the hero's attack logic. It could be stronger or more consistent than a goblin's.
     
